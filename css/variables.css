@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Design System - Association Marfans (Mission 2)
+   Palette unifiée et validée au Contrast Checker (WCAG 2.1 AA/AAA)
+   Rayons de bordure uniformisés sur l'ensemble de l'interface.
+   ========================================================================== */
+
+:root {
+  /* Couleurs principales (Marfans) */
+  --color-primary: #16325C;        /* Bleu marine institutionnel (contraste 12.77:1 sur blanc) */
+  --color-primary-hover: #0F2342;
+  --color-primary-light: #EAF0F8;  /* Fond doux bleu très pâle */
+
+  --color-accent: #A51D36;         /* Rouge carmin accessible (contraste 7.43:1 sur blanc et avec texte blanc) */
+  --color-accent-hover: #86152A;
+  --color-accent-light: #FDF2F4;
+
+  --color-secondary: #4C1D6B;      /* Violet profond accessible (contraste 12.4:1 avec texte blanc) */
+  --color-secondary-light: #F5EFFA;
+
+  /* Neutres & Surfaces */
+  --color-bg: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F1F5F9;
+  --color-border: #CBD5E1;
+  --color-border-strong: #64748B;
+
+  /* Textes */
+  --color-text: #1E293B;           /* Contraste > 13:1 sur blanc */
+  --color-text-muted: #475569;     /* Contraste ~7.5:1 sur blanc */
+  --color-text-inverse: #FFFFFF;
+
+  /* États sémantiques (jamais utilisés seuls sans texte/icône) */
+  --color-success-bg: #DCFCE7;
+  --color-success-text: #14532D;
+  --color-success-border: #15803D;
+
+  --color-warning-bg: #FEF3C7;     /* Fond ambre clair avec texte sombre */
+  --color-warning-text: #78350F;
+  --color-warning-border: #B45309;
+
+  --color-danger-bg: #FEE2E2;
+  --color-danger-text: #7F1D1D;
+  --color-danger-border: #B91C1C;
+
+  --color-info-bg: #E0F2FE;
+  --color-info-text: #0C4A6E;
+  --color-info-border: #0369A1;
+
+  /* Focus clavier haute visibilité */
+  --focus-ring-color: #D97706;
+  --focus-ring: 3px solid var(--focus-ring-color);
+  --focus-offset: 2px;
+
+  /* Typographie fluide & lisible (zoom 200% compatible) */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --text-xs: 0.875rem;   /* 14px min pour accessibilité */
+  --text-sm: 0.9375rem;  /* 15px */
+  --text-base: 1rem;     /* 16px */
+  --text-lg: 1.125rem;   /* 18px */
+  --text-xl: 1.25rem;    /* 20px */
+  --text-2xl: clamp(1.35rem, 2.2vw, 1.75rem);
+  --text-3xl: clamp(1.75rem, 3vw, 2.35rem);
+
+  /* Espacements */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+
+  /* Rayons harmonisés (cohérence entre cartes, boutons, champs, tableaux et badges) */
+  --radius: 0.5rem;      /* 8px standard */
+  --radius-sm: 0.375rem; /* 6px éléments compacts */
+
+  /* Ombres & Largeur max */
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.12);
+  --container-max: 75rem; /* 1200px */
+}
