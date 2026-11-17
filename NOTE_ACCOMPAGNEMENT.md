@@ -9,7 +9,7 @@
 Ce prototype fonctionnel (HTML5, CSS3, JavaScript vanilla) met en pratique les recommandations de l'audit réalisé lors de la **Mission 1** tout en posant les premières briques d'interface du système d'information modélisé lors de la **Mission 3** (en vue de la connexion Back-End PHP/SQL de la **Mission 4**).
 
 Le prototype couvre deux volets complémentaires :
-1. **Volet public (vitrine refondue) :** `index.html`, `la-genetique.html`, `contact-adhesion.html`.
+1. **Volet public (vitrine refondue) :** `index.html`, `la-genetique.html`, `contact.html` + `soutenir.html`.
 2. **Volet applicatif interne (préfiguration du SI) :** `login.html`, `espace-benevole.html`, `responsable-ateliers.html`, alimentés par un jeu de données conforme au MCD (`data/mock.json` et `js/data.js`).
 
 ---
@@ -25,7 +25,7 @@ Le prototype couvre deux volets complémentaires :
 | **Navigation au clavier et focus peu visibles** (*J'adhère*, *Contact*, *Je donne*) | Anneau de focus haute visibilité (`:focus-visible` `3px solid #D97706`), lien d'évitement (« Passer au contenu principal »), indicateur actif `aria-current="page"`. | `css/base.css`, `css/components.css` |
 | **Images et icônes sociales sans intitulé accessible** (erreurs WAVE) | Ajout de `role="img"` et `aria-label` / `<title>` sur le logo et les schémas/cartes SVG, et `aria-label` explicites sur chaque lien de réseau social dans le pied de page. | Toutes les pages `.html` |
 | **Bug mobile page « La génétique »** (texte parasite + titres vidéo empilés en bas) | Structure sémantique propre sans texte masqué ; chaque vidéo et son titre `<h3>` sont regroupés dans une même carte `.video-card` avec sous-titres et transcription dépliable accessible. | `la-genetique.html`, `js/genetique.js` |
-| **Formulaires : erreurs génériques et choix d'options difficiles au clavier** | Onglets ARIA navigables aux flèches, champs natifs (`<select>`, `<fieldset>`/`<legend>`), résumé d'erreurs `role="alert"` et messages d'erreurs explicites et spécifiques à chaque champ (`aria-invalid`, `aria-describedby`). | `contact-adhesion.html`, `js/forms.js` |
+| **Formulaires : erreurs génériques et choix d'options difficiles au clavier** | Onglets ARIA navigables aux flèches, champs natifs (`<select>`, `<fieldset>`/`<legend>`), résumé d'erreurs `role="alert"` et messages d'erreurs explicites et spécifiques à chaque champ (`aria-invalid`, `aria-describedby`). | `contact.html`, `soutenir.html`, `js/forms.js` |
 
 ---
 
@@ -42,6 +42,6 @@ Les écrans internes du prototype implémentent les principales fonctionnalités
 
 * **Membre 1 :** Socle technique, Design System (`variables.css`, `base.css`, `components.css`), Header/Footer accessibles, responsive & zoom 200 %.
 * **Membre 2 :** Refonte vitrine (`index.html`, `la-genetique.html`), hiérarchie `<h1>`, SVG accessibles, correction vidéos mobile.
-* **Membre 3 :** Formulaires accessibles (`contact-adhesion.html`, `js/forms.js`) et module d'authentification SI (`login.html`, `js/auth.js`).
+* **Membre 3 :** Formulaires accessibles (`contact.html`, `soutenir.html`, `js/forms.js`) et module d'authentification SI (`login.html`, `js/auth.js`).
 * **Membre 4 :** Jeu de données conforme au MCD (`data/mock.json`, `js/data.js`) et Espace Bénévole (`espace-benevole.html`, `js/benevole.js`).
 * **Membre 5 :** Espace Responsable des Ateliers (`responsable-ateliers.html`, `js/ateliers.js`), vérifications finales d'accessibilité et rédaction de la présente note.

@@ -101,6 +101,13 @@
   gap: var(--space-2);
 }
 
+/* Bouton d'action du menu correspondant à la page/onglet actif */
+.nav-actions .btn[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 5px;
+}
+
 @media (max-width: 960px) {
   .nav-toggle {
     display: inline-flex;

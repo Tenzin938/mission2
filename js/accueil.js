@@ -43,7 +43,7 @@
           '<strong>Lieu :</strong> ' + db.escapeHtml(item.lieu.nom || 'À préciser') + '</p>' +
           '<p>' + db.escapeHtml(act.description) + '</p>' +
           '<div class="card-footer">' +
-            '<a href="contact-adhesion.html?onglet=contact&activite=' + encodeURIComponent(act.intitule) + '" class="btn btn-outline btn-sm">' +
+            '<a href="contact.html?activite=' + encodeURIComponent(act.intitule) + '" class="btn btn-outline btn-sm">' +
               'Demander des informations' +
             '</a>' +
           '</div>' +

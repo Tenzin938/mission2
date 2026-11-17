@@ -29,6 +29,21 @@
         var panel = document.getElementById(panelId);
         if (panel) panel.hidden = !isSelected;
       });
+
+      // Synchronise l'état actif des boutons « Je donne » / « J'adhère » du menu
+      var key = tab.getAttribute('data-tab');
+      document.querySelectorAll('[data-nav-tab]').forEach(function (link) {
+        if (link.getAttribute('data-nav-tab') === key) {
+          link.setAttribute('aria-current', 'page');
+        } else {
+          link.removeAttribute('aria-current');
+        }
+      });
+
+      // Met à jour l'URL (lien partageable, bouton retour cohérent)
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, '', '?onglet=' + key);
+      }
     }
 
     tabs.forEach(function (tab, index) {
@@ -60,8 +75,8 @@
   function applyQueryParams() {
     var params = new URLSearchParams(window.location.search);
     var onglet = params.get('onglet');
-    if (onglet && window._activateMarfansTab) {
-      window._activateMarfansTab(onglet);
+    if (window._activateMarfansTab) {
+      window._activateMarfansTab(onglet === 'don' ? 'don' : 'adhesion');
     }
 
     var activite = params.get('activite');
